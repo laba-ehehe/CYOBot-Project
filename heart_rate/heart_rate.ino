@@ -12,9 +12,14 @@ long lastBeat = 0; //Time at which the last beat occurred
 float beatsPerMinute;
 int beatAvg;
 
+// #define SDA_PIN 15
+// #define SCL_PIN 5
+
 void setup() {
   Serial.begin(115200);
   Serial.println("Initializing...");
+
+  // Wire.begin(SDA, SCL);
 
   // Initialize sensor
   if (!particleSensor.begin(Wire, I2C_SPEED_FAST)) {

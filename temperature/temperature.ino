@@ -1,6 +1,6 @@
 // Chọn chân Analog đọc cảm biến.
 // Select the Analog pin to read the sensor.
-#define SENSOR_PIN A1
+#define SENSOR_PIN 5
 
 // Các hằng số trong công thức NTC.
 // Constants in math formula NTC.
@@ -57,11 +57,14 @@ void loop()
   // Truyền giá trị đo được của cảm biến lên máy tính.
   // Transmit the measured value of the sensor to the computer.
   
-  Serial.print("tempK: ");
-  Serial.println(tempK, 2);
+  // Serial.print("tempK: ");
+  // Serial.println(tempK, 2);
   
-  Serial.print("tempC: ");
-  Serial.println(tempC, 2);
+  // Serial.print("tempC: ");
+  // Serial.println(tempC, 2);
+
+  Serial.print("cac: ");
+  Serial.println(value, 2);
 
   // Chờ 0,5s mới đo lại.
   // Wait 0,5s to measure again.
